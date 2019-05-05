@@ -26,7 +26,7 @@ pipeline {
 
     stage('Run ansible playbook') {
         steps {
-          ansiblePlaybook disableHostKeyChecking: true, extras: '-e "version=${version}"', inventory: 'hosts', playbook: 'webdeployer.yml'
+          ansiblePlaybook disableHostKeyChecking: true, extras: '-e "version=${version}"', inventory: 'hosts', playbook: 'cfm/webdeployer.yml'
         }
     }
 
